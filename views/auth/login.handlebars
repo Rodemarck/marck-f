@@ -1,0 +1,25 @@
+<div class="container">
+    <form action="/login" method="post" class="row needs-validation">
+        <div class="col-md4">
+            <label for="login" class="form-label">Login</label>
+            <input type="text" class="form-control {{#if erro.login}}is-invalid{{/if}}" name="login" id="login">
+            {{#if erro.login}}
+                <div class="invalid-feedback">
+                    {{erro.login}}
+                </div>
+            {{/if}}
+        </div>
+        <div class="col-md4">
+            <label for="password" class="form-label">Senha</label>
+            <input type="password" class="form-control {{#if erro.password}}is-invalid{{/if}}" name="password" id="password">
+            {{#if erro.password}}
+                <div class="invalid-feedback">
+                    {{erro.password}}
+                </div>
+            {{/if}}
+        </div>
+        <div class="col-md4">
+            <button type="submit">submit</button>
+        </div>
+    </form>
+</div>
