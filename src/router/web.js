@@ -8,6 +8,7 @@ const router =(app,router)=>{
     router.post('/login',middleware.auth.logged_out, controller.login.login)
     router.get('/login',middleware.auth.logged_out, controller.login.form_login)
     
+    
     router.get('/sess',(req,res)=>{
         res.send(req.session)
     })

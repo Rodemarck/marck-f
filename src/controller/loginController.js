@@ -1,5 +1,6 @@
 import {connect} from "../db/db.js"
 import * as bcrypt from "bcrypt"
+import { validation } from "../helper/_.js"
 
 
 
@@ -36,6 +37,12 @@ const form_login = async(req,res)=>{
     res.render('auth/login')
 }
 const form_register = async(req,res)=>{
-    res.render()
+    res.render('auth/register')
 }
-export {login,logout,form_login}
+
+const register = async(req,res)=>{
+    if (validation.validate_form_register(req.body)){
+        
+    }
+}
+export {login,logout,form_login,form_register,register}
